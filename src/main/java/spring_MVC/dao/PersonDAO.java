@@ -22,7 +22,11 @@ public class PersonDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
